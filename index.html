@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Casio Original Website | Calculator</title>
+        <link rel="shortcut icon" href="calculator.png" type="image/x-icon">
+    </head>
+    <style>
+    *{
+        font-family: sans-serif;
+        font-weight: 400
+    }
+    form{
+        border: 1px solid rgb(58, 54, 75);
+        width: fit-content;
+        padding: 20px;
+        border-radius: 5%;
+        box-shadow: 10px 10px 10px black;
+        background-color: rgb(58, 54, 75);
+    }
+
+    .result{
+        height: 50px;
+        width: 200px;
+        border-radius: 5%;
+        border: none;
+        font-size: 32px;
+    }
+    .button{
+        border-radius: 5%;
+        border: none;
+        width: 50px;
+        height: 36px;
+        background-color: rgb(7, 7, 7);
+        box-shadow: 2px 2px 10px white;
+        color: teal;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .button:hover{
+        background-color: rgb(58, 54, 75);
+        color: aquamarine;
+    }
+</style>
+    <body>
+        <center>
+            <div>
+                <h1>Casio Electronic Calculator</h1>
+                <form action name="form">
+                    <input class="result" type="text" name="result"><br><br>
+                    <input class="button" type="button" value="AC"
+                        onclick="form.result.value = '0'">
+                    <input class="button" type="button" value="C"
+                        onclick="form.result.value = form.result.value.toString().slice(0,-1)">
+                    <input class="button" type="button" value="*"
+                        onclick="form.result.value += '*'">
+                    <input class="button" type="button" value="OF"
+                        onclick="form.result.value = ''"><br><br>
+                    <input class="button" type="button" value="9"
+                        onclick="form.result.value += '9'">
+                    <input class="button" type="button" value="8"
+                        onclick="form.result.value += '8'">
+                    <input class="button" type="button" value="7"
+                        onclick="form.result.value += '7'">
+                    <input class="button" type="button" value="/"
+                        onclick="form.result.value += '/'"><br><br>
+                    <input class="button" type="button" value="4"
+                        onclick="form.result.value += '4'">
+                    <input class="button" type="button" value="5"
+                        onclick="form.result.value += '5'">
+                    <input class="button" type="button" value="6"
+                        onclick="form.result.value += '6'">
+                    <input class="button" type="button" value="-"
+                        onclick="form.result.value += '-'"><br><br>
+                    <input class="button" type="button" value="1"
+                        onclick="form.result.value += '1'">
+                    <input class="button" type="button" value="2"
+                        onclick="form.result.value += '2'">
+                    <input class="button" type="button" value="3"
+                        onclick="form.result.value += '3'">
+                    <input class="button" type="button" value="+"
+                        onclick="form.result.value += '+'"><br><br>
+                    <input class="button" type="button" value="0"
+                        onclick="form.result.value += '0'">
+                    <input class="button" type="button" value="00"
+                        onclick="form.result.value += '00'">
+                    <input class="button" type="button" value="."
+                        onclick="form.result.value += '.'">
+                    <input class="button" type="button" value="="
+                        onclick="form.result.value = eval(form.result.value)">
+                </form>
+            </div>
+        </center>
+    </body>
+</html>
+<script src="script.js"></script>
